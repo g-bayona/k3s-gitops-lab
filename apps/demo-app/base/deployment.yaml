@@ -17,11 +17,3 @@ spec:
           image: nginx:1.27-alpine
           ports:
             - containerPort: 80
-          volumeMounts:
-            - name: app-content
-              mountPath: /usr/share/nginx/html/index.html
-              subPath: index.html
-      volumes:
-        - name: app-content
-          configMap:
-            name: demo-app-html
