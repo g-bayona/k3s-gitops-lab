@@ -9,3 +9,8 @@ resources:
 replicas:
   - name: demo-app
     count: 1
+
+configMapGenerator:
+  - name: demo-app-html
+    files:
+      - index.html
